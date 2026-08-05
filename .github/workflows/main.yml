@@ -1,31 +1,71 @@
-# ワークフロー名
-name: chatbot
+# 毎朝の AI ダイジェストを LINE に配信する。
+name: daily-digest
 
 on:
- push:
-  #schedule:
-   #- cron: '0 22 * * *'
+  schedule:
+    # 22:00 UTC = 翌 07:00 JST
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "配信せず内容だけ確認する"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-digest
+  cancel-in-progress: false
 
 jobs:
-  build:
-    # Ubuntuの最新版環境内で処理を実行することを指定
+  digest:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
-    # 実行する処理＆コマンド指定
     steps:
-      # リポジトリからチェックアウトして以下の処理を実行していく
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v1
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
         with:
-          python-version: 3.8
-      - name: Install dependencies
+          python-version: "3.11"
+
+      - name: Install
+        run: pip install -e ".[llm]"
+
+      # 配信済みリポジトリを翌日以降に送らないための状態を実行間で引き継ぐ。
+      # キーは実行ごとに変え、restore-keys で直近のものを拾う。
+      - name: Restore delivery state
+        uses: actions/cache/restore@v4
+        with:
+          path: state
+          key: veile-state-${{ github.run_id }}
+          restore-keys: veile-state-
+
+      - name: Run digest
+        env:
+          LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+          LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VEILE_LLM_ENABLED: ${{ secrets.ANTHROPIC_API_KEY != '' && '1' || '0' }}
         run: |
-          # pip更新
-          python -m pip install --upgrade pip
-          # 必要なパッケージインストール
-          pip install line-bot-sdk
-      - name: Run script
-        run: |
-          # main.pyの実行
-          python main.py
+          python -m veile_bot run \
+            ${{ inputs.dry_run && '--dry-run' || '' }} \
+            --out "digests/$(date -u +%Y-%m-%d).md"
+
+      - name: Save delivery state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: state
+          key: veile-state-${{ github.run_id }}
+
+      - name: Upload digest archive
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: digest-${{ github.run_id }}
+          path: digests/
+          if-no-files-found: ignore
+          retention-days: 30

@@ -4,10 +4,26 @@ __pycache__/
 .pnp/
 .pnp.js
 
-# environment
+# environment / secrets
 .env
 .env.local
 .env.*.local
+info.json
+*.credentials.json
+
+# runtime state (配信済み記録)
+state/
+
+# notebooks
+.ipynb_checkpoints/
+
+# python
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # build
 .next/
