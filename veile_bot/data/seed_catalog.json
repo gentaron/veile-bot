@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "provenance": "ユーザー提供のキュレーション（note.com/humble_bobcat51 のまとめ + GitHub Trending メモ）。一次情報で未検証のため、配信時は必ず provenance 表示を伴う。",
+  "collected_at": "2026-08-05",
+  "items": [
+    {
+      "key": "penguinharness",
+      "title": "PenguinHarness",
+      "url": "https://note.com/humble_bobcat51/n/n622a78202682",
+      "summary": "エージェントがエージェントを自動構築するデスクトップ型プラットフォーム。手組みのチェーンから自律オーケストレーションへ。オープンモデル最適化によるコスト削減、Agent Tuning による自己進化、Trace view を備える。",
+      "tags": ["agent", "orchestration", "desktop", "エージェント"],
+      "curation": 0.95
+    },
+    {
+      "key": "finn-loop",
+      "title": "Finn-loop",
+      "url": "https://note.com/humble_bobcat51/n/n2c687c404583",
+      "summary": "Claude Code の /loop を活用した AI ソフトウェア・ファクトリー。GitHub + Linear 連携で spec → build → review の 3 スキルが自律ループし、最終マージは人間がゲートキーパー。1 Issue = 1 PR ルールで暴走を防ぐ。",
+      "tags": ["agent", "claude", "automation", "自動化", "coding"],
+      "curation": 0.9
+    },
+    {
+      "key": "canvas-ui",
+      "title": "Canvas UI",
+      "url": "https://note.com/humble_bobcat51/n/n7de4ffda332a",
+      "summary": "html-in-canvas (drawElement) API を使った WebGL 演出ライブラリ。DOM のアクセシビリティを保ったままシェーダー効果を重ねられる。React / Vue / Svelte 対応で shadcn 風にソースを取り込む形式。",
+      "tags": ["frontend", "webgl", "developer tools"],
+      "curation": 0.7
+    },
+    {
+      "key": "openworker",
+      "title": "OpenWorker",
+      "url": "https://note.com/humble_bobcat51/n/n06790306233d",
+      "summary": "「AI 同僚」型のデスクトップ常駐エージェント。25 以上の SaaS（Slack / GitHub / Notion / Jira など）を横断して実務を完遂。ローカルファースト + MCP 連携、スケジュール実行、BYO モデル。",
+      "tags": ["agent", "mcp", "automation", "エージェント", "local"],
+      "curation": 0.9
+    },
+    {
+      "key": "josie-2-4b-preview",
+      "title": "JOSIE-2-4B-Preview",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "Apple Silicon 向けの「思考型」ローカル LLM。",
+      "tags": ["llm", "local", "ローカル", "apple-silicon"],
+      "curation": 0.6
+    },
+    {
+      "key": "bento-slides",
+      "title": "Bento (Bento Slides)",
+      "url": "https://note.com/humble_bobcat51/n/n9dedf5d3011d",
+      "summary": "1 ファイル（約 560KB の HTML）にエディタ・ビューア・プレゼンターを詰め込んだ自己完結型オフィススイート。アカウント/インストール不要でオフライン可、JSON 直操作で AI 親和性が高く、CRDT + E2EE 同期。",
+      "tags": ["developer tools", "local", "offline"],
+      "curation": 0.75
+    },
+    {
+      "key": "alibaba/open-code-review",
+      "title": "alibaba/open-code-review (OCR)",
+      "url": "https://note.com/humble_bobcat51/n/n5413f2cad808",
+      "summary": "アリババが大規模運用で磨いたハイブリッド AI コードレビュー。決定論的パイプライン + LLM エージェントで行レベルの精密指摘、トークン消費を大幅削減。NPE / スレッド安全性 / XSS / SQL インジェクションなどのルール内蔵、GitHub Actions 連携可。",
+      "tags": ["code review", "coding", "agent", "ci"],
+      "curation": 0.95
+    },
+    {
+      "key": "citrolabs/ego-lite",
+      "title": "citrolabs/ego-lite",
+      "url": "https://github.com/citrolabs/ego-lite",
+      "summary": "AI エージェント専用の高速ブラウザ。人間とエージェントが同じブラウザを共有しつつ、エージェントは専用の Space で並列作業できる。Chrome のログイン状態を引き継ぎ、CLI ではなく JS 関数呼び出しで複雑タスクを一括処理してトークンを節約。",
+      "tags": ["agent", "browser", "claude", "developer tools"],
+      "curation": 0.9
+    },
+    {
+      "key": "tencentcloud/tencentdb-agent-memory",
+      "title": "TencentCloud/TencentDB-Agent-Memory",
+      "url": "https://github.com/TencentCloud/TencentDB-Agent-Memory",
+      "summary": "AI エージェント向けのチームレベル・メモリハブ。会話・ドキュメント・コードを Chat Memory / Skill / LLM-Wiki / Code-Graph の 4 種類の再利用可能なメモリ資産に変換し、複数エージェント間で共有・統治する。",
+      "tags": ["agent", "memory", "rag", "エージェント"],
+      "curation": 0.9
+    },
+    {
+      "key": "uad-ng",
+      "title": "Universal Android Debloater Next Generation (UAD-ng)",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "非ルート環境の Android から bloatware を効率的に削除できる Rust 製 GUI ツール（ADB ベース）。プライバシー・バッテリー・セキュリティの改善が目的。",
+      "tags": ["android", "developer tools", "privacy"],
+      "curation": 0.55
+    },
+    {
+      "key": "shieldstral-1.0-3b",
+      "title": "Shieldstral-1.0-3B",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "Mistral の 3B オープンウェイト多モーダル安全分類器。自然言語でポリシーを指定でき、テキスト + 画像に対応。軽量ながら大型モデル相当の性能を謳う。",
+      "tags": ["llm", "safety", "local", "ローカル"],
+      "curation": 0.7
+    },
+    {
+      "key": "deepgrove-maple-preview",
+      "title": "DeepGrove Maple-Preview",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "20B-A1B の三値重み（ternary）推論特化モデル。iPhone で約 120 tok/s、Mac mini で 200 tok/s 超という高速性を主張。",
+      "tags": ["llm", "local", "ローカル", "quantization", "推論"],
+      "curation": 0.8
+    },
+    {
+      "key": "ling-3.0-flash",
+      "title": "Ling-3.0-flash",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "総パラメータ 124B・アクティブ約 5.1B のハイブリッド推論 MoE がオープンウェイト化。効率と実力のバランスを強調。",
+      "tags": ["llm", "moe", "推論", "open-weights"],
+      "curation": 0.8
+    },
+    {
+      "key": "pokee-isaac-28b",
+      "title": "Pokee-Isaac 28B",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "1000 万トークン級の超長コンテキストを売りにしたモデル。価格・性能で既存の商用モデルを意識した構成。",
+      "tags": ["llm", "long-context", "推論"],
+      "curation": 0.7
+    },
+    {
+      "key": "lfm2.5-2.6b",
+      "title": "LFM2.5-2.6B",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "小型・高速・高機能を売りにした軽量モデル。エッジ/ローカル実行向け。",
+      "tags": ["llm", "local", "ローカル", "edge"],
+      "curation": 0.6
+    },
+    {
+      "key": "gander-viewer",
+      "title": "Gander",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "完全オフライン・権限ほぼゼロ・約 15MB の Android ファイルビューア。PDF・Office・画像・動画・コードを一通り扱える。",
+      "tags": ["android", "offline", "developer tools"],
+      "curation": 0.5
+    },
+    {
+      "key": "vercel-eve",
+      "title": "eve（自律型 AI マーケティングチーム）",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "Notion・Slack・Resend を繋ぐ自律型マーケチーム構成のテンプレート。リーダー役エージェントが専門エージェントに仕事を振る。",
+      "tags": ["agent", "automation", "自動化", "エージェント"],
+      "curation": 0.7
+    },
+    {
+      "key": "microsoft-skill-recorder",
+      "title": "Skill Recorder",
+      "url": "https://note.com/humble_bobcat51",
+      "summary": "Microsoft のオープンソースツール。画面操作 + 音声を録画するだけで、AI エージェント用の Skill / Automation を生成する。",
+      "tags": ["agent", "automation", "自動化", "developer tools"],
+      "curation": 0.85
+    },
+    {
+      "key": "firecrawl/pdf-inspector",
+      "title": "firecrawl/pdf-inspector",
+      "url": "https://github.com/firecrawl/pdf-inspector",
+      "summary": "Rust 製の高速 PDF 検査・分類・抽出ツール。",
+      "tags": ["rust", "developer tools", "rag"],
+      "curation": 0.6
+    }
+  ]
+}
