@@ -1,0 +1,29 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gentaron/infocollect/HEAD/ecosystem/schema.json",
+  "schema": 1,
+  "name": "veile-bot",
+  "group": "tools",
+  "groupLabel": "道具",
+  "status": "maintained",
+  "role": "Jupyter ノートブックのボット試作",
+  "stack": "Python · Jupyter",
+  "produces": [],
+  "consumes": [],
+  "upstream": [],
+  "downstream": [],
+  "siblings": [
+    "pk3",
+    "recordlog",
+    "Bubble",
+    "webportal"
+  ],
+  "hub": {
+    "repo": "https://github.com/gentaron/infocollect",
+    "map": "https://github.com/gentaron/infocollect/blob/HEAD/ecosystem/README.md",
+    "kb": "https://raw.githubusercontent.com/gentaron/infocollect/HEAD/docs/kb",
+    "mcp": [
+      "infocollect-kb",
+      "forge"
+    ]
+  }
+}
