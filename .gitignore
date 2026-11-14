@@ -37,3 +37,6 @@ coverage/
 # misc
 *.tsbuildinfo
 .turbo/
+
+# local LINE credentials
+info.json
